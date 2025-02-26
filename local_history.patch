@@ -1,0 +1,161 @@
+Index: dev/src/PresentationLayer/CLI.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/dev/src/PresentationLayer/CLI.java b/dev/src/PresentationLayer/CLI.java
+--- a/dev/src/PresentationLayer/CLI.java	
++++ b/dev/src/PresentationLayer/CLI.java	(date 1721082241682)
+@@ -26,117 +26,49 @@
+         System.out.println("Welcome !\nThis is the supplier module which was created by Gil Eden and Lidor Mashiach.\n");
+         boolean ExitProgram = false;
+         loadData();
+-        if (UserName.equals("Admin")) {
+-            System.out.println("You are in Admin-Mode");
+-            System.out.println("What would you like to accomplish today?");
+-            while (!ExitProgram) {
+-                System.out.println("_________________________________________________ ");
+-                System.out.println("1. Actions related to Suppliers.");
+-                System.out.println("2. Actions related to Orders.");
+-                System.out.println("3. Actions related to Products.");
+-                System.out.println("4. Add new user information that get permissions to this module.");
+-                System.out.println("5. Changing information for an existing user in the system.");
+-                System.out.println("6. Delete user permissions from the system.");
+-                System.out.println("7. Exit From The System.");
+-                System.out.println("_________________________________________________ ");
+-                System.out.print("Please enter the number of your choice here: ");
+-                int choice = scanner.nextInt();
+-                System.out.println();
+-
+-                System.out.println();
+-                switch (choice) {
+-                    case 1:
+-                        SuppliersMain();
+-                        System.out.println("Is there anything else you would like to accomplish?");
+-
+-                        break;
+-                    case 2:
+-                        OrdersMain();
+-                        System.out.println("Is there anything else you would like to accomplish?");
+-
+-                        break;
+-                    case 3:
+-                        ProductsMain();
+-                        System.out.println("Is there anything else you would like to accomplish?");
+-                        break;
+-
+-                    case 4:
+-                        ////
+-                        System.out.println("Is there anything else you would like to accomplish?");
+-
+-                        break;
+-
+-                    case 5:
+-                        /////
+-                        System.out.println("Is there anything else you would like to accomplish?");
+-
+-                        break;
+-
+-                    case 6:
+-                        //////
+-                        System.out.println("Is there anything else you would like to accomplish?");
+-
+-                        break;
+-                    case 7:
+-                        ExitProgram = true;
+-                        System.out.println("It was a pleasure working with you today.\nHave a nice day!");
+-                        exitdata();
+-
+-                        break;
+-                    default:
+-                        System.out.println("\n\nOops... It's seems like you entered an invalid choice number.");
+-                        System.out.println("Let's Try again.");
+ 
+-                        break;
+-                }
+-
+-            }
+-        }
+-
+-        else {
+-            System.out.println("What would you like to accomplish today?");
+-            while (!ExitProgram) {
+-                System.out.println("_________________________________________________ ");
+-                System.out.println("1. Actions related to Suppliers.");
+-                System.out.println("2. Actions related to Orders.");
+-                System.out.println("3. Actions related to Products.");
+-                System.out.println("4. Exit From The System.");
+-                System.out.println("_________________________________________________ ");
+-                System.out.print("Please enter the number of your choice here: ");
+-                int choice = scanner.nextInt();
+-                System.out.println();
++        System.out.println("What would you like to accomplish today?");
++        while (!ExitProgram) {
++            System.out.println("_________________________________________________ ");
++            System.out.println("1. Actions related to Suppliers.");
++            System.out.println("2. Actions related to Orders.");
++            System.out.println("3. Actions related to Products.");
++            System.out.println("4. Exit From The System.");
++            System.out.println("_________________________________________________ ");
++            System.out.print("Please enter the number of your choice here: ");
++            int choice = scanner.nextInt();
++            System.out.println();
+ 
+-                System.out.println();
+-                switch (choice) {
+-                    case 1:
+-                        SuppliersMain();
+-                        System.out.println("Is there anything else you would like to accomplish?");
++            System.out.println();
++            switch (choice) {
++                case 1:
++                    SuppliersMain();
++                    System.out.println("Is there anything else you would like to accomplish?");
+ 
+-                        break;
+-                    case 2:
+-                        OrdersMain();
+-                        System.out.println("Is there anything else you would like to accomplish?");
++                    break;
++                case 2:
++                    OrdersMain();
++                    System.out.println("Is there anything else you would like to accomplish?");
+ 
+-                        break;
+-                    case 3:
+-                        ProductsMain();
+-                        System.out.println("Is there anything else you would like to accomplish?");
++                    break;
++                case 3:
++                    ProductsMain();
++                    System.out.println("Is there anything else you would like to accomplish?");
+ 
+-                        break;
+-                    case 4:
+-                        ExitProgram = true;
+-                        System.out.println("It was a pleasure working with you today.\nHave a nice day!");
+-                        exitdata();
++                    break;
++                case 4:
++                    ExitProgram = true;
++                    System.out.println("It was a pleasure working with you today.\nHave a nice day!");
++                    exitdata();
+ 
+-                        break;
+-                    default:
+-                        System.out.println("\n\nOops... It's seems like you entered an invalid choice number.");
+-                        System.out.println("Let's Try again.");
++                    break;
++                default:
++                    System.out.println("\n\nOops... It's seems like you entered an invalid choice number.");
++                    System.out.println("Let's Try again.");
+ 
+-                        break;
+-                }
++                    break;
++            }
+ 
+-            }
+         }
+     }
+ 
